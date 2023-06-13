@@ -5,6 +5,12 @@ This script utilises the GPIO pins on a Raspberry Pi to restart two running serv
 
 In time I plan to add a command to sound a buzzer (attached to another GPIO Pin) which will serve as an audible confirmation that the services have been restarted.
 
+To implement this script:
+* Save the file (perhaps in `/home/pi/Scripts/`?)
+* `$ sudo nano /etc/rc.local`
+* Place this line **before the final `exit 0`** - `python /home/pi/Scripts/restartLog.py &`
+* `$ sudo reboot`
+
 As ever, I offer this simple script for other people's interest and, perhaps, assistance.
 
 Best wishes. 73
